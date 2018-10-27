@@ -1,0 +1,5 @@
+. Demander à l'utilisateur de rentrer des noms de films
+. Ajouter ces films dans une liste
+. Gérer les doublons
+. Classer les films par ordre alphabétique
+. Afficher la liste
