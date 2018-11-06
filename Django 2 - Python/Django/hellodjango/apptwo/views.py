@@ -10,22 +10,10 @@ def djangorocks(request):
 
 def picture_detail(request, category, year=0, month=0, day=0):
     template = loader.get_template('apptwo/pictures.html')
+    return HttpResponse(template.render({}, request))
 
-    picture = {
-        'filename': 'mountain.jpg',
-        'categories': ['color', 'landscape' ,],
-    }
-
-    context = {
-        'page_title': "this is the picture detail",
-        'description': "<p>This <b>picture</b> was take on Mount Fuji</p>",
-        'category': category,
-        'year': year,
-        'month': month,
-        'day': day,
-        'picture': picture,
-    }
-    return HttpResponse(template.render(context, request))
+    # alternative response
+    # return render(request, "apptwo/pictures.html")
 
 
 

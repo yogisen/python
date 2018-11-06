@@ -1,7 +1,7 @@
 class TwoDigitDayConverter:
     regex = '[0-9]{2}'
 
-    def to_python(self, value):
+    def to_python(selfself, value):
         return int(value)
 
     def to_url(self, value):
