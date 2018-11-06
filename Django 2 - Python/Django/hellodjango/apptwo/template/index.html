@@ -1,33 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Index AppTwo</title>
+
+    <link rel="stylesheet" href="{% static stylesheet %}" type="text/css" media="screen" />
 </head>
 <body>
 
-{# Title block here #}
-<h1>{{ title }}</h1>
-<div>
-    Category: {{ category }} <br />
-    Year: {{ year }} <br />
-    Month: {{ month }} <br />
-    Day: {{ day }} <br />
-</div>
-
-{% comment "This is a commented block. Not visible in the generated HTML" %}
-<h2>Test title</h2>
-{% endcomment %}
-
-<!-- <h3>HTML COMMENT</h3> -->
-
-
-<h2>Access variable detail</h2>
-<div>
-    filename: {{ picture.filename }} <br/>
-    First category: {{ picture.categories.0 }}
-</div>
-
+{% for picture in pictures %}
+    {% with 'pictures/'|add:picture.filename as filepath %}
+    <div class="picture">
+        <h2>{{ picture.name }}</h2>
+        <img src="{% static filepath %}" />
+    </div>
+    {% endwith %}
+{% endfor %}
 
 </body>
 </html>
