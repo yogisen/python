@@ -1,0 +1,21 @@
+{% extends "peoplebook/base.html" %}
+
+{% block title %}{{ block.super}} List{% endblock %}
+
+{% block content %}
+
+    <h1>PeopleBook List</h1>
+    {% if display == 'full' %}
+        {% for key, user in users.items %}
+            {% include "peoplebook/block_users_detail.html" %}
+        {% endfor %}
+    {% else %}
+
+    <ul>
+    {% for key, user in users.items %}
+        <li><a href="{% url 'peoplebook-users-detail' key %}">{{ user.name|title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+{% endblock content %}

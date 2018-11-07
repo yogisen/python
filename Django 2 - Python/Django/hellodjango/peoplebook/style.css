@@ -1,0 +1,19 @@
+#content {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.userdetail {
+    border: 1px #1350a0 solid;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 3%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}PeopleBook - {% endblock %}</title>
+    <link rel="stylesheet" href="{% static "style.css" %}" type="text/css" media="screen" />
+</head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>
