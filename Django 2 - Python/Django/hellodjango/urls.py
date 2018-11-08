@@ -22,5 +22,7 @@ from appone import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
+    path('songs/add/<str:song_name>/<int:duration>/', views.songs_add),
+    path('songs/', views.songs_list),
     path('apptwo/', include('apptwo.urls')),
 ]

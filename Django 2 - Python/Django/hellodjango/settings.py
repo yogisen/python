@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'appone.apps.ApponeConfig',
     'apptwo.apps.ApptwoConfig',
+    'peoplebook.apps.PeoplebookConfig',
 ]
 
 MIDDLEWARE = [
