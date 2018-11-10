@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing form</title>
+</head>
+<style>
+    label {
+        display: block;
+        margin: 15px 0px 15px; 0x;
+    }
+
+    input {
+        box-sizing: border-box;
+        border: 1px solid #C2C2C2;
+        padding: 7px;
+        outline: none;
+    }
+
+    input[type=submit] {
+        display: block;
+        margin: 10px 0px 10px 0px;
+        padding: 8px 15px 8px 15px;
+        box-shadow: 1px 1px 4px #DADADA;
+        border-radius: 3px;
+    }
+</style>
+<body>
+
+<h1>Test form</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <!--{{ form.as_p }}-->
+    <input type="submit" values="Submit">
+</form>
+</body>
+</html>
