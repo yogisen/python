@@ -6,5 +6,6 @@ from appone import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('getformdata/', views.get_form_data),
+    path('thanks/', views.thanks, name='thanks'),
+    path('getformdata/', views.get_form_data, name='get-form-data'),
 ]
