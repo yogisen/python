@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+<div class="col-sm-9">
+    {% for post in posts %}
+    <div class="mb-4">
+        <h3><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h3>
+        <small>Posted on {{ post.created_at }}</small>
+        <hr>
+        <p class="text-muted">
+            {{ post.text|linebreaks|safe|truncatewords:100 }}
+            <a href="{% url 'post-detail' post.pk %}">[Read More]</a>
+        </p>
+        <a href="{% url 'post-list' post.category.slug %}"
+           class="badge badge-info">{{ post.category.name|capfirst }}</a>
+
+    </div>
+    {% empty %}
+    <div class="text-center">
+        <p class="display-1">:-(</p>
+        <h3 class="mt-4">
+            Sorry, no posts for the category <span class="badge badge-info">{{ category.name }}</span>
+        </h3>
+    </div>
+    {% endfor %}
+
+</div>
+
+<div class="col-sm-3">
+    <h5>Categories</h5>
+    <ul class="list-unstyled">
+        {% for cat in categories %}
+        <li>
+            <a href="{% url 'post-list' cat.slug %}"
+               class="badge badge-secondary">{{ cat.name|capfirst }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}

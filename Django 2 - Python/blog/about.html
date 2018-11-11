@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="col-12">
+    <h1>Django Reinhardt</h1>
+    <hr>
+    <div class="row">
+        <div class="col-md-9">
+            <p class="lead">
+                Jean Reinhardt (French: [dʒãŋɡo ʁɛjnaʁt] or [dʒɑ̃ɡo ʁenɑʁt]; 23 January 1910 – 16 May 1953) stage name Django Reinhardt, was a Belgian-born Romani French jazz guitarist, musician and composer, regarded as one of the greatest musicians of the twentieth century. He was the first jazz talent to emerge from Europe and remains the most significant
+            </p>
+            <p>
+                With violinist Stéphane Grappelli,[1] Reinhardt formed the Paris-based Quintette du Hot Club de France in 1934. The group was among the first to play jazz that featured the guitar as a lead instrument.[4] Reinhardt recorded in France with many visiting American musicians, including Coleman Hawkins and Benny Carter, and briefly toured the United States with Duke Ellington's orchestra in 1946. He died suddenly of a stroke at the age of 43.
+
+                Reinhardt's most popular compositions have become standards within gypsy jazz, including "Minor Swing",[5] "Daphne", "Belleville", "Djangology", "Swing '42", and "Nuages". Jazz guitarist Frank Vignola claims that nearly every major popular-music guitarist in the world has been influenced by Reinhardt.[6] Over the last few decades, annual Django festivals have been held throughout Europe and the U.S., and a biography has been written about his life.[2] In February 2017, the Berlin International Film Festival held the world premiere of the French film, Django.
+            </p>
+
+        </div>
+        <div class="col-md-3">
+            <img src="{% static 'img/django.jpg' %}" class="img-fluid" />
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
