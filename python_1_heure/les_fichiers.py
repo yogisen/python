@@ -1,5 +1,5 @@
 # On défini le chemin du fichier à lire
-chemin_fichier = r"C:\PythonEnUneHeure\fichier_a_lire.txt"
+chemin_fichier = r"/home/yogi/Téléchargements/code/fichier_a_lire.txt"
 
 # Première façon de lire ou écrire dans un fichier.
 # On utilise le mode 'r' pour lire le fichier.
