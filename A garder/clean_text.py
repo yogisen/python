@@ -15,9 +15,18 @@ clean_text = clean_text(texte, clean_characters, replacement)
 
 print(clean_text)
 
+""""
+f = open("texte.txt", "r", encoding="utf-8")
+texte = f.read()
 
-ou -------------------------------------------------
-```
+def nettoyage(texte, texte_remplacé):
+    remplacement = ""
+    nettoyage = texte.replace(texte_remplacé, remplacement)
+    return (nettoyage)
+
+a = nettoyage("texte. .à .nettoyer./ de. ses points", ".")
+print(a)
+--------------------------
 def clean_text(string):
     cleaned_string = string.replace(",","")
     cleaned_string = cleaned_string.replace("'","")
@@ -26,4 +35,4 @@ def clean_text(string):
     cleaned_string = cleaned_string.replace("é","e")
     cleaned_string = cleaned_string.lower()
     return (cleaned_string)
-```
+"""
