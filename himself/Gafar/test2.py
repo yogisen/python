@@ -2,7 +2,7 @@ import glob
 import os
 from random import randint
 
-directory = 'home/yogi/Documents/test'
+directory = '/home/yogi/Documents/test'
 
 def checkDirectory(path, lookFor):
     content = os.listdir(path)
@@ -17,10 +17,11 @@ def checkDirectory(path, lookFor):
                     yield file
 
 
-for file in checkDirectory(directory, 'dns 1 = 6.6.6.6'):
+for file in checkDirectory(directory, 'coucou'):
     print(file)
 
-
+Document 1 sans titre (13e copie).txt
+Document 1 sans titre (7e copie).txt
 
 '''
 for file in os.listdir("/home/yogi/Documents/test"):

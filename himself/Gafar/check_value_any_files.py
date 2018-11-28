@@ -1,6 +1,7 @@
 import os
 from random import randint
 
+# chemin ou sont present les fichiers à verifier
 directory = '/home/yogi/Documents/test/'
 
 def checkDirectory(path, lookFor):
@@ -22,6 +23,8 @@ def checkDirectory(path, lookFor):
                         # avec le break, la recherche s'arretera au premier resultat
                         break
 
+# 'dns 1= ' valeur à verifier
+# affiche les dossiers avec la valeur recherchée
 
 for idx, file in checkDirectory(directory, 'DNS 1 = 4.4.4.5'):
     print (idx, file)
