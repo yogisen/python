@@ -29,3 +29,24 @@ def nfl_wins_per_years(team, year):
 
 Pittsburgh_Steelers_2009wins = nfl_wins_per_years("Pittsburgh Steelers", "2012")
 print(Pittsburgh_Steelers_2009wins)
+
+class Team():
+
+    def __init__(self,name):
+        self.name = name
+
+    def print_name(self):
+        print(self.name)
+
+    def count_total_wins(self):
+        count =0
+        for row in nfl:
+            if row[2] == self.name:
+                count +=1
+        return (count)
+
+broncos = Team("Denver Broncos")
+
+broncos_wins = broncos.count_total_wins()
+
+print("broncos" + str(broncos_wins) )
